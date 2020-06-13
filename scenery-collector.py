@@ -13,8 +13,7 @@ default_list = [
     '1000 Version',
     'SCENERY',
     '',
-    'SCENERY_PACK D:\Steam\steamapps\common\X-Plane 11\Resources\plugins\SAM\lib\SAM_Seasons/',
-    'SCENERY_PACK D:\Steam\steamapps\common\X-Plane 11\Resources\plugins\SAM\lib\SAM_Library/',
+    # Add your extra libraries here using 'full directory path', format
 ]
 
 """ This function collects a list of folder names and iterates through them to create a new scenery_packs.ini file """
