@@ -7,6 +7,7 @@ scenery_file = 'scenery_packs.ini'
 backup_file = scenery_file + '.' + str(int(time.time()))
 
 # Set up default values to be printed at the top of the file
+# If you have scenery libraries not found in the Custom Scenery-folder, add them below the empty '', line
 default_list = [
     'I',
     '1000 Version',
