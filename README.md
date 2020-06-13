@@ -3,7 +3,7 @@ A small script for sorting the scenery_packs.ini file based on the folders found
 
 ## Requirements
 * Python 3.6 or newer
-* Basic Python knowledge for debugging
+* Basic Python knowledge for debugging and custom edits
 
 ## Instructions
 1. Place this file in your Custom Scenery-folder in your X-Plane 11 install.
