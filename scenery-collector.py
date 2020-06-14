@@ -5,6 +5,7 @@ from os import path
 # Output and backup file names
 scenery_file = 'scenery_packs.ini'
 backup_file = scenery_file + '.' + str(int(time.time()))
+scenery_count = 0
 
 # Set up default values to be printed at the top of the file
 # If you have scenery libraries not found in the Custom Scenery-folder, add them below the empty '', line
@@ -13,11 +14,13 @@ default_list = [
     '1000 Version',
     'SCENERY',
     '',
-    # Add your extra libraries here using 'full directory path', format
+    # Add your extra libraries here using 'full directory path', format, example below
+    #'SCENERY_PACK D:\Steam\steamapps\common\X-Plane 11\Resources\plugins\SAM\lib\SAM_Seasons/',
 ]
 
 """ This function collects a list of folder names and iterates through them to create a new scenery_packs.ini file """
 def new_scenery_packs():
+    global scenery_count
     # Set up empty array for holding the folder names
     scenery_list = []
     try:
@@ -25,6 +28,7 @@ def new_scenery_packs():
             if os.path.isfile(name):
                 continue
             scenery_list.append(name)
+            scenery_count = len(scenery_list)
     except:
         print('Failed to fetch folder names.')
 
@@ -50,7 +54,7 @@ if __name__ == '__main__':
         
         try:
             new_scenery_packs()
-            print(f'New {scenery_file} created.')
+            print(f'New {scenery_file} created with {scenery_count} entries.')
         except:
             print(f'Failed to build new {scenery_file} file.')
     else:
